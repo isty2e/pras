@@ -1,0 +1,19 @@
+
+# Dolt database files (added by bd init)
+.dolt/
+*.db
+.tmp/
+
+# Python caches and environments
+__pycache__/
+*.py[cod]
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
