@@ -1,23 +1,38 @@
 [build-system]
 requires = [
   "hatchling>=1.24",
-  "scikit-build-core>=0.12,<0.13",
+  "hatch-vcs>=0.5",
+  "scikit-build-core>=0.12",
 ]
 build-backend = "hatchling.build"
 
 [project]
 name = "pras"
-version = "0.0.0"
+dynamic = ["version"]
 description = "Typed Python package for protein repair based on PRAS."
 readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "MIT" }
 license-files = ["LICENSE", "vendor/faspr/LICENSE"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering :: Bio-Informatics",
+]
 dependencies = [
   "gemmi>=0.7.5",
   "numpy>=1.26",
   "typing_extensions>=4.12",
 ]
+
+[project.urls]
+Homepage = "https://github.com/isty2e/pras"
+Repository = "https://github.com/isty2e/pras"
+Issues = "https://github.com/isty2e/pras/issues"
 
 [project.optional-dependencies]
 analysis = [
@@ -58,8 +73,19 @@ venvPath = "."
 [tool.hatch.build.targets.wheel]
 packages = ["src/pras"]
 
+[tool.hatch.build.hooks.vcs]
+version-file = "src/pras/_version.py"
+
 [tool.hatch.build.targets.wheel.hooks.scikit-build]
 experimental = true
+
+[tool.hatch.version]
+source = "vcs"
+fallback-version = "0.1.0"
+tag-pattern = "^(?:v)?(?P<version>.+)$"
+
+[tool.hatch.version.raw-options]
+version_scheme = "no-guess-dev"
 
 [tool.scikit-build]
 minimum-version = "build-system.requires"

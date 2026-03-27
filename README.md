@@ -18,7 +18,13 @@ Current deferred scope:
 
 ## Installation
 
-Install the package from the repository root:
+Install from PyPI:
+
+```bash
+pip install pras
+```
+
+Or install from the repository root:
 
 ```bash
 pip install .
@@ -72,3 +78,7 @@ pytest tests/unit -q
 
 This repository is licensed under [MIT](LICENSE).
 Third-party provenance is summarized in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+
+## Changelog
+
+Release notes are tracked in [CHANGELOG.md](CHANGELOG.md).

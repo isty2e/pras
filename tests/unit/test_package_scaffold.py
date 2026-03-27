@@ -6,7 +6,9 @@ import importlib
 def test_package_imports() -> None:
     package = importlib.import_module("pras")
 
-    assert package.__all__ == ["process_structure", "ProcessOptions"]
+    assert package.__all__ == ["__version__", "process_structure", "ProcessOptions"]
+    assert isinstance(package.__version__, str)
+    assert package.__version__
 
 
 def test_scaffold_modules_import() -> None:
