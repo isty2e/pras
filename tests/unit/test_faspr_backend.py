@@ -50,7 +50,7 @@ def test_faspr_backend_builds_local_sequence_override_with_fake_executable(
     executable_path.write_text(
         "\n".join(
             (
-                "#!/bin/zsh",
+                "#!/bin/sh",
                 "set -eu",
                 'input_path=""',
                 'output_path=""',
