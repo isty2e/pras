@@ -73,9 +73,6 @@ venvPath = "."
 [tool.hatch.build.targets.wheel]
 packages = ["src/pras"]
 
-[tool.hatch.build.hooks.vcs]
-version-file = "src/pras/_version.py"
-
 [tool.hatch.build.targets.wheel.hooks.scikit-build]
 experimental = true
 

@@ -18,16 +18,16 @@ Current deferred scope:
 
 ## Installation
 
-Install from PyPI:
-
-```bash
-pip install pras
-```
-
-Or install from the repository root:
+Install from the repository root:
 
 ```bash
 pip install .
+```
+
+Or install directly from GitHub:
+
+```bash
+pip install "git+https://github.com/isty2e/pras.git"
 ```
 
 This build also packages the vendored FASPR executable and rotamer library used
